@@ -16,7 +16,7 @@
 start=0 # Variavel de controle
 nvidiaTempMax=71 # temperatura limite
 
-echo "" > logTempMax.log # zerar arqwuivo de log
+echo "" > logTempMax.log # zerar arquivo de log
 echo "" > logTempMin.log # ...
 while true
 do
@@ -48,7 +48,7 @@ do
 	if [ "$temp" -gt "$nvidiaTempMax" ] # condicional para tomada de ação caso a temp lida seja maior do que estipulado na variuavel nvidiaTempMax
 		then
 			# ação a ser tomada qdo a temp passar do limite
-			sudo pkill -9 -e .*steam.* # procura pela string do nome do programa que esteja em execuçao e enxerra com sinal 9
+			sudo pkill -9 -e .*steam.* # procura pela string do nome do programa que esteja em execuçao e encerra com sinal 9
 			sudo pkill -9 -e .*hl2.* # ...
 
 	fi

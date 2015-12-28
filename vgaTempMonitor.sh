@@ -2,7 +2,7 @@
 # Author: Diego Narducci
 # E-mail: diego.narducci88@gmail.com
 
-#Versão 0.1a -> Versão inicial.
+# Versão 0.1a -> Versão inicial.
 ######################################################
 # Script de monitoramento de temperadura da placa de video, onde tem um setpoint para tomada de ação e 2 logs: um te temperatura minima outro de maxima, sao salvos em 2 arquiuvos no diretório corrente..
 # Criei esse script por uma necessidade minha em monitorar a temperatura da placa de video enquanto realizava algo que gerasse extresse na mesma, assim que a temperatura da vga alcança o valor da variavel nvidiaTempMax automaticamente o programa ou jogo é fechado, o moniytoramento é feito a cada 30 segundos.

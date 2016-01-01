@@ -3,6 +3,7 @@
 # E-mail: diego.narducci88@gmail.com
 
 # Versão 0.1a -> Versão inicial.
+# Versão 0.1b -> Adicionado popup com aviso usando o zenity e corrigido bug de display.
 ######################################################
 # Script de monitoramento de temperadura da placa de video, onde tem um setpoint para tomada de ação e 2 logs: um te temperatura minima outro de maxima, sao salvos em 2 arquiuvos no diretório corrente..
 # Criei esse script por uma necessidade minha em monitorar a temperatura da placa de video enquanto realizava algo que gerasse extresse na mesma, assim que a temperatura da vga alcança o valor da variavel nvidiaTempMax automaticamente o programa ou jogo é fechado, o moniytoramento é feito a cada 30 segundos.
@@ -50,6 +51,7 @@ do
 			# ação a ser tomada qdo a temp passar do limite
 			sudo pkill -9 -e .*steam.* # procura pela string do nome do programa que esteja em execuçao e encerra com sinal 9
 			sudo pkill -9 -e .*hl2.* # ...
+			DISPLAY=":0.0" zenity --info --text="Alcançado limite de temperatura, processos encerrados..."
 
 	fi
 		sleep 30 # aguardar 30 segundos
